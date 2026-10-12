@@ -1,19 +1,16 @@
-# Polka-Zeit website
+# Polka-Zeit website — version 2
 
-A free, static, multi-page site for GitHub Pages. No build tools or paid hosting required.
+Real band photography, red-and-white checkerboard design, and five pages.
 
-## Pages
-- `index.html` — Home
-- `shows.html` — Shows
-- `about.html` — About
-- `videos.html` — Videos
-- `booking.html` — Booking
+## Publish
+1. Open the GitHub repository `Polka-Zeit/polkazeit-website`.
+2. Click **Add file → Upload files**.
+3. Open the extracted ZIP folder and upload **all files and the assets folder** to the repository root, replacing the existing versions.
+4. Commit changes and refresh the GitHub Pages site after deployment.
 
-## Publishing
-Upload the files and `assets` folder to the root of the `main` branch of your public GitHub Pages repository. Under Settings → Pages, choose Deploy from a branch → main → /(root).
-
-## Your creative assets
-Place photos, logos and graphics in `assets/`. All visible placeholders are intentional. You can change wording directly in the HTML files.
-
-## Custom domain
-Connect `polkazeit.com` later using GitHub Pages custom domain settings and Namecheap DNS. Do not configure DNS until the preview site is working.
+## Important
+- All 12 source JPGs in `assets/` are copied **byte-for-byte** from the uploaded originals. No faces or photos were AI-generated or retouched.
+- `polka-zeit-thumbnail.png` is the original thumbnail.
+- `polka-zeit-lettering.png` is an experimental manual cutout of the existing lettering (not used in the site). The website uses CSS text branding until an approved logo is supplied.
+- Show dates, booking contact, and video URLs are intentionally not invented. Supply these to complete the site.
+- The Google Fonts stylesheet requires internet access; fallback fonts are included.
