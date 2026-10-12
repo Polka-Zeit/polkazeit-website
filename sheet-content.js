@@ -17,7 +17,7 @@
       const headers=(t.cols||[]).map(c=>(c.label||'').trim());
       const rows=(t.rows||[]).map(row=>{
         const out={};(row.c||[]).forEach((cell,i)=>{
-          let v=cell?(cell.f!==undefined?cell.f:cell.v):'';
+          let v=cell?(typeof cell.v==='string' && /^Date\(/.test(cell.v) ? cell.v : (cell.f!==undefined?cell.f:cell.v)):'';
           // gviz may represent dates as Date(2026,9,26)
           if(typeof v==='string'&&/^Date\(\d{4},\d{1,2},\d{1,2}/.test(v)){
             const m=v.match(/^Date\((\d+),(\d+),(\d+)/);v=m?`${m[1]}-${String(Number(m[2])+1).padStart(2,'0')}-${m[3].padStart(2,'0')}`:v;
