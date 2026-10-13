@@ -67,7 +67,28 @@
       // Only allow filename, never remote/script URLs
       const filename=(r['Photo filename']||'').trim();
       if(/^[\w-]+\.(jpg|jpeg|png|webp)$/i.test(filename)){const img=el('img');img.src='assets/'+filename;img.alt=r.Name;img.loading='lazy';card.appendChild(img)}
-      const content=el('div');content.appendChild(el('h3','',r.Name));if(r.Instrument)content.appendChild(el('p','kicker red',r.Instrument));if(r.Biography)content.appendChild(el('p','',r.Biography));card.appendChild(content);target.appendChild(card)});
+      const content=el('div');content.appendChild(el('h3','',r.Name));if(r.Instrument)content.appendChild(el('p','kicker red',r.Instrument));if(r.Biography){
+  const p=el('p');
+  const pattern=/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const bio=String(r.Biography);
+  let last=0;
+  for(const match of bio.matchAll(pattern)){
+    p.appendChild(document.createTextNode(bio.slice(last,match.index)));
+    const url=validUrl(match[2]);
+    if(url){
+      const a=el('a','',match[1]);
+      a.href=url;
+      a.target='_blank';
+      a.rel='noopener noreferrer';
+      p.appendChild(a);
+    }else{
+      p.appendChild(document.createTextNode(match[0]));
+    }
+    last=match.index+match[0].length;
+  }
+  p.appendChild(document.createTextNode(bio.slice(last)));
+  card.appendChild(p);
+}card.appendChild(content);target.appendChild(card)});
   }
   function fields(rows){return Object.fromEntries(rows.filter(r=>r.Field).map(r=>[r.Field.toLowerCase().trim(),r.Value||'']))}
   function renderBooking(rows){const f=fields(rows);setText('#booking-headline',f.headline);setText('#booking-description',f.description);
