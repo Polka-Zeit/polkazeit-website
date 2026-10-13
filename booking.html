@@ -5,9 +5,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Polka-Zeit — live polka, festival music, videos, and booking.">
+<meta name="description" content="Polka Zeit — live polka, festival music, videos, and booking.">
 
-<title>Booking | Polka-Zeit</title>
+<title>Booking | Polka Zeit</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,7 @@
 <header class="site-header">
   <div class="nav-wrap">
 
-    <a class="wordmark" href="index.html" aria-label="Polka-Zeit home">
+    <a class="wordmark" href="index.html" aria-label="Polka Zeit home">
       POLKA<span>ZEIT</span><b>!</b>
     </a>
 
@@ -62,20 +62,38 @@
       <h2>LET'S MAKE<br>SOME NOISE.</h2>
 
       <p id="booking-description">
-        Get in touch to discuss availability, performance details,
-        and your event.
+        For festival appearances, corporate events, private
+        celebrations, and other engagements, please contact
+        our management team.
       </p>
 
-      <!-- Permanent booking email -->
-      <div id="booking-contact">
-  <a class="btn btn-red" href="mailto:polkazeit@gmail.com">
-    Email for booking ↗
-  </a>
-</div>
+      <div class="booking-management">
+
+        <p class="kicker red">
+          EXCLUSIVE BOOKING &amp; MANAGEMENT
+        </p>
+
+        <h3>Helgenson Entertainment</h3>
+
+        <button
+          class="btn btn-red"
+          type="button"
+          id="copy-booking-email"
+          aria-label="Copy booking email address"
+        >
+          polkazeit@gmail.com
+        </button>
+
+        <p id="copy-confirmation"
+           class="small-note"
+           aria-live="polite"></p>
+
+      </div>
 
     </div>
 
-    <img src="assets/dcrowd.jpg" alt="Crowd enjoying a Polka-Zeit performance">
+    <img src="assets/dcrowd.jpg"
+         alt="Crowd enjoying a Polka Zeit performance">
 
   </div>
 
@@ -109,6 +127,21 @@
 <script src="script.js"></script>
 <script src="sheet-config.js"></script>
 <script src="sheet-content.js"></script>
+
+<script>
+document.getElementById('copy-booking-email')
+  .addEventListener('click', async function () {
+    const message = document.getElementById('copy-confirmation');
+
+    try {
+      await navigator.clipboard.writeText('polkazeit@gmail.com');
+      message.textContent = 'Email address copied!';
+    } catch (error) {
+      message.textContent =
+        'Select and copy: polkazeit@gmail.com';
+    }
+  });
+</script>
 
 </body>
 </html>
