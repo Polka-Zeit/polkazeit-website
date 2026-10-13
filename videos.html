@@ -1,1 +1,204 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Polka-Zeit — live polka, festival music, videos, and booking."><title>Videos | Polka-Zeit</title><link rel="stylesheet" href="style.css"></head><body><div class="checker top" aria-hidden="true"></div><header class="site-header"><div class="nav-wrap"><a class="wordmark" href="index.html" aria-label="Polka-Zeit home">POLKA<span>ZEIT</span><b>!</b></a><button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">MENU ☰</button><nav id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="shows.html">Shows</a><a href="about.html">About</a><a href="videos.html" aria-current="page">Videos</a><a href="booking.html">Booking</a></nav></div></header><main><section class="page-hero wrap"><p class="kicker red">TURN IT UP</p><h1>WATCH <span>POLKA-ZEIT.</span></h1><p class="lead">A little taste of the party, straight from the stage.</p><div class="video-spotlight"><img src="assets/polka-zeit-thumbnail.png" alt="Polka-Zeit live concert Part 1 video thumbnail"><div><p class="kicker red">LIVE PERFORMANCE</p><h2>POLKA-ZEIT PARTY!</h2><p>Watch the band's live performances on YouTube. Video links can be added here as soon as they're provided.</p><p class="small-note">Send the three YouTube video URLs to replace this preview with playable videos.</p></div></div><div id="video-list" class="video-grid"><p class="empty-list">New videos coming soon.</p></div><div class="photo-strip"><img src="assets/stage-live.jpg" alt="Polka-Zeit performing on stage"><img src="assets/band-live.jpg" alt="Full band performing at a festival"></div></section></main><footer><div class="checker" aria-hidden="true"></div><div class="footer-content"><a class="wordmark footer-mark" href="index.html">POLKA<span>ZEIT</span><b>!</b></a><p class="footer-tagline">Live music. Big energy. Good times.</p><p>© <span id="year"></span> Polka-Zeit · <a href="booking.html">Booking inquiries</a></p></div></footer><script src="script.js"></script><script src="sheet-config.js"></script><script src="sheet-content.js"></script></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Watch Polka-Zeit live performances, including Beer Barrel Polka and La Crosse Oktoberfest.">
+
+<title>Videos | Polka-Zeit</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.video-page {
+  padding: 65px 20px 85px;
+}
+
+.video-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.video-heading h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  margin: 0 0 15px;
+}
+
+.video-heading h1 span {
+  color: #e53935;
+}
+
+.video-heading p {
+  font-size: 1.15rem;
+}
+
+.video-list {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-item {
+  margin-bottom: 55px;
+}
+
+.video-item h2 {
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  margin: 0 0 15px;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="checker top" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="wordmark" href="index.html" aria-label="Polka-Zeit home">
+      POLKA<span>ZEIT</span><b>!</b>
+    </a>
+
+    <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">
+      MENU ☰
+    </button>
+
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="shows.html">Shows</a>
+      <a href="about.html">About</a>
+      <a href="videos.html" aria-current="page">Videos</a>
+      <a href="booking.html">Booking</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="video-page wrap">
+
+  <div class="video-heading">
+    <h1>POLKA-ZEIT <span>LIVE!</span></h1>
+    <p>Turn it up and enjoy the show.</p>
+  </div>
+
+  <div class="video-list">
+
+    <!-- BEER BARREL POLKA -->
+    <div class="video-item">
+      <h2>BEER BARREL POLKA</h2>
+
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/-wbzMhVv5Uc"
+          title="Polka-Zeit - Beer Barrel Polka"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- PART 1 -->
+    <div class="video-item">
+      <h2>LA CROSSE OKTOBERFEST — PART 1</h2>
+
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/8U2egbJVEvI"
+          title="Polka-Zeit - La Crosse Oktoberfest Part 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- PART 2 -->
+    <div class="video-item">
+      <h2>LA CROSSE OKTOBERFEST — PART 2</h2>
+
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/pAkncm8d5zQ"
+          title="Polka-Zeit - La Crosse Oktoberfest Part 2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- PART 3 -->
+    <div class="video-item">
+      <h2>LA CROSSE OKTOBERFEST — PART 3</h2>
+
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/OwC0PLGmBiY"
+          title="Polka-Zeit - La Crosse Oktoberfest Part 3"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="checker" aria-hidden="true"></div>
+
+  <div class="footer-content">
+
+    <a class="wordmark footer-mark" href="index.html">
+      POLKA<span>ZEIT</span><b>!</b>
+    </a>
+
+    <p class="footer-tagline">
+      Live music. Big energy. Good times.
+    </p>
+
+    <p>
+      © <span id="year"></span> Polka-Zeit ·
+      <a href="booking.html">Booking inquiries</a>
+    </p>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="sheet-config.js"></script>
+<script src="sheet-content.js"></script>
+
+</body>
+</html>
