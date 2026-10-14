@@ -5,3 +5,8 @@
 /* Polka-Zeit additional original performance photographs */
 .intro-stage-photo{display:block;width:100%;max-height:550px;object-fit:cover;object-position:center 45%;margin:42px auto 0}
 .shows-stage-photo{display:block;width:100%;max-height:540px;object-fit:cover;object-position:center 45%;margin:32px 0 38px}
+/* Make band member names fit on the About page */
+.bio-card h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  overflow-wrap: anywhere;
+}
