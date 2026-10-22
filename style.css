@@ -10,16 +10,16 @@
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   overflow-wrap: anywhere;
 }
-/* PolkaZeit Oktoberfest diamond checkerboard */
+/* Three rows of Oktoberfest diamonds */
 .checker,
 .checker.top,
 .checker.divider-check {
   height: 54px;
-  background-color: #ffffff;
-  background-image:
-    linear-gradient(45deg, #ed230c 25%, transparent 25%, transparent 75%, #ed230c 75%),
-    linear-gradient(45deg, #ed230c 25%, transparent 25%, transparent 75%, #ed230c 75%);
-  background-size: 32px 32px;
-  background-position: 0 0, 16px 16px;
+  min-height: 54px;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' fill='white'/%3E%3Cpath d='M18 0L36 18L18 36L0 18Z' fill='%23ed230c'/%3E%3C/svg%3E");
+  background-size: 36px 36px;
   background-repeat: repeat;
 }
