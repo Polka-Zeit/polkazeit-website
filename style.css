@@ -10,3 +10,22 @@
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   overflow-wrap: anywhere;
 }
+/* Oktoberfest red-and-white diamond borders */
+.checker,
+.checker.top,
+.checker.divider-check {
+  height: 36px;
+  background-color: white;
+  background-image:
+    linear-gradient(135deg, #ed230c 25%, transparent 25%),
+    linear-gradient(225deg, #ed230c 25%, transparent 25%),
+    linear-gradient(315deg, #ed230c 25%, transparent 25%),
+    linear-gradient(45deg, #ed230c 25%, transparent 25%);
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  background-size: 72px 72px;
+  background-repeat: repeat;
+}
